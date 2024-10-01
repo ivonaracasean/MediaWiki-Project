@@ -1,0 +1,11 @@
+mediawiki:
+  url: "http://someurl"
+  indexPages:
+    pages:
+      - "pagename1"
+      - "pagename2"
+    ignore:
+      - "some links that we ignore"
+  pages:
+    - "pagename1"
+    - "pagename2"
