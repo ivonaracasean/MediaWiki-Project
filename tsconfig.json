@@ -8,8 +8,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node"]  // Ensure this is included if needed
+    "types": ["node", "jest"]  // Ensure this is included if needed
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "tests/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
