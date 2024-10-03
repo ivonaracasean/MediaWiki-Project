@@ -1,0 +1,15 @@
+wrongMediawiki:  # Misnamed section
+  url: 12345  # Invalid, should be a string
+
+incorrectPages:  # Misnamed section
+  - page: "Philosophy_of_science"
+    id:
+      - "toc-History"
+
+pages: # This is ok
+  - page: "Philosophy_of_science"
+    id:
+      - "toc-History"
+
+ignorePages:
+  - 12345  # Invalid, should be a string

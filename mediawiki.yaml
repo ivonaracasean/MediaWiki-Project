@@ -1,0 +1,48 @@
+mediawiki:
+  url: 'https://en.wikipedia.org/wiki'
+
+indexPages:
+  pages:
+    - page: "Karl Popper"
+      id:
+        - "toc-Life_and_career"
+        - "toc-Academic_life"
+        - "toc-Death"
+        - "toc-Honours_and_awards"
+        - "toc-Philosophy"
+        - "toc-Influence"
+        - "toc-Criticism"
+        - "toc-Published_works"
+        - "toc-Filmography"
+
+pages:
+  - page: "Vienna"
+    id:
+      - "toc-History"
+      - "toc-Geography"
+      - "toc-Government"
+      - "toc-Culture"
+      - "toc-Demographics"
+  - page: "Philosophy of science"
+    id:
+      - "toc-History"
+      - "toc-Major_figures"
+      - "toc-Contemporary_debates"
+
+ignorePages:
+  - "n-mainpage-description"
+  - "n-contents"
+  - "n-currentevents"
+  - "n-randompage"
+  - "n-aboutsite"
+  - "n-contactpage"
+  - "n-help"
+  - "n-recentchanges"
+  - "n-upload"
+  - "n-specialpages"
+  - "n-cite"
+  - "n-print"
+  - "n-permalink"
+  - "n-wikibase-item"
+  - "n-urlshortener"
+  - "n-download"
