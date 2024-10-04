@@ -1,14 +1,10 @@
 import * as fs from 'fs';
+import path from "node:path";
 
-export async function saveContent(data: Record<string, Record<string, any[]>>, filePath: string) {
-    return new Promise<void>((resolve, reject) => {
-        fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8', (err) => {
-            if (err) {
-                reject(`Failed to save content to ${filePath}: ${err}`);
-            } else {
-                console.log(`Extracted content saved to ${filePath}`);
-                resolve();
-            }
-        });
-    });
+export async function saveContent(data: any[], filePath: string) {
+
+    await fs.promises.mkdir(path.dirname(filePath), {recursive: true});
+    for(const d of data)
+        await fs.promises.appendFile(filePath, JSON.stringify(d) + '\n');
+
 }

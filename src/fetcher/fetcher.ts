@@ -11,7 +11,7 @@ export async function fetchPageHtml(url: string): Promise<string> {
     }
 }
 
-export async function processPage(pageDefn: PageDefn, baseUrl: string): Promise<Record<string, any[]>> {
+export async function processPage(pageDefn: PageDefn, baseUrl: string): Promise<any[]> {
     const pageName = typeof pageDefn === 'string' ? pageDefn : pageDefn.page;
     const pageUrl = `${baseUrl}/${pageName}`;
 

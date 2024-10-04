@@ -7,18 +7,13 @@ export async function orchestrate() {
     const config: MediaWikiConfig = loadConfig();
     const baseUrl = config.mediawiki.url;
 
-    let extractedData: Record<string, Record<string, any[]>> = {};
+    let extractedData: any[] = [];
 
-    for (const page of config.pages) {
-        const pageContent = await processPage(page, baseUrl);
-        const pageName = typeof page === 'string' ? page : page.page;
-        extractedData[pageName] = pageContent;
-    }
+    const allPages = [...config.pages, ...config.indexPages.pages];
 
-    for (const page of config.indexPages.pages) {
+    for (const page of allPages) {
         const pageContent = await processPage(page, baseUrl);
-        const pageName = typeof page === 'string' ? page : page.page;
-        extractedData[pageName] = pageContent;
+        extractedData = extractedData.concat(pageContent);
     }
 
     await saveContent(extractedData, 'mediawiki.json');
